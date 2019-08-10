@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h6 style="color: darkorange;">Choose Any One Option</h6>
+<h6>---------------------</h6>
+<br><br>
+<a href="{{url_for('input')}}"><button type="button" class="btn btn-warning btn-lg">Try with your own data</button></a>
+<br><br>
+<p style="font-size: x-large; color: darkorange;">OR</p>
+<a href="{{url_for('system_input_choice')}}"><button type="button" class="btn btn-warning btn-lg">Check out an example</button></a>
+{% endblock %}

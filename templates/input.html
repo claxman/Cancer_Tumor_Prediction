@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+{% block content %}
+<h6 style="color: darkorange;">Correctly Enter The Data</h6>
+<h6>---------------------</h6>
+<br><br>
+<div class="jumbotron resultFont" style="background-color: rgb(100, 95, 95);">
+<form action="{{url_for('predict')}}">
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label for="input1" style="color: rgb(211, 233, 10)">Radius_Mean</label>
+            <input type="text" class="form-control" name="radius_mean" id="input1" placeholder="radius_mean" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="input2" style="color: rgb(211, 233, 10);">Texture_Mean</label>
+            <input type="text" class="form-control" name="texture_mean" id="input2" placeholder="texture_mean" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="input3" style="color: rgb(211, 233, 10);">Perimeter_Mean</label>
+            <input type="text" class="form-control" name="perimeter_mean" id="input3" placeholder="perimeter_mean" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="input4" style="color: rgb(211, 233, 10);">Area_Mean</label>
+            <input type="text" class="form-control" name="area_mean" id="input4" placeholder="area_mean" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="input5" style="color: rgb(211, 233, 10);">Smoothness_Mean</label>
+            <input type="text" class="form-control" name="smoothness_mean" id="input5" placeholder="smoothness_mean" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="input6" style="color: rgb(211, 233, 10);">Compactness_Mean</label>
+            <input type="text" class="form-control" name="compactness_mean" id="input6" placeholder="compactness_mean" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="input7" style="color: rgb(211, 233, 10);">Concavity_Mean</label>
+            <input type="text" class="form-control" name="concavity_mean" id="input7" placeholder="concavity_mean" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="input8" style="color: rgb(211, 233, 10);">Concave Points_Mean</label>
+            <input type="text" class="form-control" name="concave points_mean" id="input8" placeholder="concave points_mean" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="input9" style="color: rgb(211, 233, 10);">Symmetry_Mean</label>
+            <input type="text" class="form-control" name="symmetry_mean" id="input9" placeholder="symmetry_mean" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="input10" style="color: rgb(211, 233, 10);">Fractal_Dimension_Mean</label>
+            <input type="text" class="form-control" name="fractal_dimension_mean" id="input10" placeholder="fractal_dimension_mean" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="input11" style="color: rgb(211, 233, 10);">Radius_Se</label>
+            <input type="text" class="form-control" name="radius_se" id="input11" placeholder="radius_se" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="input12" style="color: rgb(211, 233, 10);">Texture_Se</label>
+            <input type="text" class="form-control" name="texture_se" id="input12" placeholder="texture_se" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="input13" style="color: rgb(211, 233, 10);">Perimeter_Se</label>
+            <input type="text" class="form-control" name="perimeter_se" id="input13" placeholder="perimeter_se" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="input14" style="color: rgb(211, 233, 10);">Area_Se</label>
+            <input type="text" class="form-control" name="area_se" id="input14" placeholder="area_se" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="input15" style="color: rgb(211, 233, 10);">Smoothness_Se</label>
+            <input type="text" class="form-control" name="smoothness_se" id="input15" placeholder="smoothness_se" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="input16" style="color: rgb(211, 233, 10);">Compactness_Se</label>
+            <input type="text" class="form-control" name="compactness_se" id="input16" placeholder="compactness_se" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="input17" style="color: rgb(211, 233, 10);">Concavity_Se</label>
+            <input type="text" class="form-control" name="concavity_se" id="input17" placeholder="concavity_se" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="input18" style="color: rgb(211, 233, 10);">Concave Points_Se</label>
+            <input type="text" class="form-control" name="concave points_se" id="input18" placeholder="concave points_se" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="input19" style="color: rgb(211, 233, 10);">Symmetry_Se</label>
+            <input type="text" class="form-control" name="symmetry_se" id="input19" placeholder="symmetry_se" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="input20" style="color: rgb(211, 233, 10);">Fractal_Dimension_Se</label>
+            <input type="text" class="form-control" name="fractal_dimension_se" id="input20" placeholder="fractal_dimension_se" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="input21" style="color: rgb(211, 233, 10);">Radius_Worst</label>
+            <input type="text" class="form-control" name="radius_worst" id="input21" placeholder="radius_worse" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="input22" style="color: rgb(211, 233, 10);">Texture_Worst</label>
+            <input type="text" class="form-control" name="texture_worst" id="input22" placeholder="texture_worse" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="input23" style="color: rgb(211, 233, 10);">Perimeter_Worst</label>
+            <input type="text" class="form-control" name="perimeter_worst" id="input23" placeholder="perimeter_worse" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="input24" style="color: rgb(211, 233, 10);">Area_Worst</label>
+            <input type="text" class="form-control" name="area_worst" id="input24" placeholder="area_worse" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="input25" style="color: rgb(211, 233, 10);">Smoothness_Worst</label>
+            <input type="text" class="form-control" name="smoothness_worst" id="input25" placeholder="smoothness_worse" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="input26" style="color: rgb(211, 233, 10);">Compactness_Worst</label>
+            <input type="text" class="form-control" name="compactness_worst" id="input26" placeholder="compactness_worse" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="input27" style="color: rgb(211, 233, 10);">Concavity_Worst</label>
+            <input type="text" class="form-control" name="concavity_worst" id="input27" placeholder="concavity_worse" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="input28" style="color: rgb(211, 233, 10);">Concave Points_Worst</label>
+            <input type="text" class="form-control" name="concave points_worst" id="input28" placeholder="concave points_worse" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="input29" style="color: rgb(211, 233, 10);">Symmetry_Worst</label>
+            <input type="text" class="form-control" name="symmetry_worst" id="input29" placeholder="symmetry_worse" required>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="input30" style="color: rgb(211, 233, 10);">Fractal_Dimension_Worst</label>
+            <input type="text" class="form-control" name="fractal_dimension_worst" id="input30" placeholder="fractal_dimension_worse" required>
+        </div>
+        
+    </div> 
+    <br>
+    <button type="submit" class="btn btn-warning btn-lg btn-block">&nbsp;&nbsp;&nbsp;&nbsp;Predict&nbsp;&nbsp;&nbsp;&nbsp;</button>
+</form>
+</div>
+{% endblock %}
